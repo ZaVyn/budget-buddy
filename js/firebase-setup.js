@@ -8,14 +8,7 @@ import * as UI from './modules/ui.js';
 // ============================================================
 // 1. FIREBASE CONFIGURATION (PASTIKAN SUDAH DIGANTI DENGAN PUNYA ANDA)
 // ============================================================
-const firebaseConfig = {
-    apiKey: "AIzaSyCRjZLmLtIKtPGFsy0lCF5zhUYSSxlk_vg",
-    authDomain: "penny-wise-3d901.firebaseapp.com",
-    projectId: "penny-wise-3d901",
-    storageBucket: "penny-wise-3d901.firebasestorage.app",
-    messagingSenderId: "59950508203",
-    appId: "1:59950508203:web:24d2a547cf6da5867f2fee"
-};
+import { firebaseConfig } from './firebase-config.js';
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
