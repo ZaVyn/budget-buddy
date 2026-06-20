@@ -1,0 +1,22 @@
+* { font-family: 'Plus Jakarta Sans', sans-serif; }
+body { box-sizing: border-box; }
+
+.tab-active { background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; }
+.card-shadow { box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+
+/* Gradients */
+.income-gradient { background: linear-gradient(135deg, #10b981 0%, #34d399 100%); }
+.expense-gradient { background: linear-gradient(135deg, #ef4444 0%, #f87171 100%); }
+.balance-gradient { background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%); }
+.savings-gradient { background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%); }
+
+/* Animations */
+@keyframes slideIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+.animate-slide { animation: slideIn 0.3s ease-out; }
+@keyframes pulse-warning { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
+.pulse-warning { animation: pulse-warning 1.5s ease-in-out infinite; }
+
+/* Custom Scrollbar */
+.scrollbar-thin::-webkit-scrollbar { width: 6px; }
+.scrollbar-thin::-webkit-scrollbar-track { background: #f1f5f9; border-radius: 3px; }
+.scrollbar-thin::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }

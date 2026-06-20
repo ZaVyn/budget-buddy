@@ -1,0 +1,23 @@
+{
+  "hosting": [
+    {
+      "target": "budget-buddy", 
+      "public": ".",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ]
+    },
+    {
+      "site": "penny-wise-3d901",
+      "redirects": [
+        {
+          "source": "**",
+          "destination": "https://budget-buddy-smart.web.app",
+          "type": 301
+        }
+      ]
+    }
+  ]
+}

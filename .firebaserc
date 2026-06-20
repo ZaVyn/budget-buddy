@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "penny-wise-3d901"
+  },
+  "targets": {
+    "penny-wise-3d901": {
+      "hosting": {
+        "budget-buddy": [
+          "budget-buddy-smart"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

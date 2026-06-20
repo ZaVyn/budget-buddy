@@ -1,0 +1,65 @@
+USER FLOW DOCUMENTATION - BUDGETBUDDY WEB APP
+=============================================
+
+1. First Visit (Guest Mode)
+---------------------------
+When a user opens the website link for the first time:
+- Status: No Login/Register required.
+- Storage: Data is stored in the user's browser (localStorage).
+- Activity:
+  * User sees an empty Dashboard (0 Baht/Currency).
+  * User can immediately use features: add transactions, set budgets, or create savings goals.
+  * Risk: If the user clears browser cache or changes devices, data is lost.
+
+2. Recording Transactions (Daily Activity)
+------------------------------------------
+This is the main feature used most frequently:
+- Step 1 (Select Type): User clicks the "Income" or "Expense" button.
+- Step 2 (Input Data):
+  * Enter Amount (e.g., 500).
+  * Select Category (e.g., Food, Transport).
+  * (Optional) Add a Note (e.g., "Lunch at mall").
+- Step 3 (Save): Click the Submit/Save button.
+- Result:
+  * Dashboard numbers (Income/Expense/Balance) update automatically.
+  * Transaction appears in the "Recent Transactions" list below.
+  * Category bar charts update instantly.
+
+3. Financial Management (Budget & Savings)
+------------------------------------------
+A. Budget Tab:
+   - Set Monthly Budget: User sets a spending limit (e.g., 20,000).
+   - Visualization: A Progress Bar appears.
+     * Green: Safe zone.
+     * Red: Warning if current monthly expenses exceed 90% of the budget.
+
+B. Dashboard Tab (Savings Goal Section):
+   - Set Goal: User creates a target (e.g., "New Phone", Target: 30,000).
+   - Add Savings:
+     * User clicks "Add Savings".
+     * Inputs amount (e.g., 1,000).
+     * IMPORTANT LOGIC: This money is deducted from the "Current Balance".
+       (Balance decreases by 1,000, Total Savings increases by 1,000).
+     * This simulates physically moving money from the wallet to a piggy bank so it isn't spent.
+
+4. Switching to Cloud (Sign Up / Login)
+---------------------------------------
+When the user wants to secure data and access it across devices:
+- Step 1: Click the "Login" button at the top right.
+- Step 2: Choose "Register" or Login.
+- Step 3 (Smart Sync):
+  * The system detects existing data in Guest Mode.
+  * The system uploads this local data to the Firebase Database (Cloud).
+  * Local storage is cleared and replaced by Cloud data.
+- Result: User is now in "Cloud Mode". Data is safely stored on Google servers. Logging in on a different device will show the exact same data.
+
+5. Support Features
+-------------------
+- Delete Transaction: Click the trash icon 🗑️ on the transaction list to remove an entry. Balance is recalculated automatically.
+- Change Language: Click the EN/TH button at the top right to toggle between English and Thai.
+- Time Filter: On the Dashboard, click "Today / This Week / This Month" to view financial summaries based on specific timeframes.
+
+=============================================
+SUMMARY FOR USER:
+"Open the web -> Use immediately (Local Data) -> Login to secure data (Cloud Data)."
+=============================================
